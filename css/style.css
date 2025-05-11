@@ -1,0 +1,153 @@
+body {
+      font-family: 'Courier New', Courier, monospace, sans-serif;
+      margin: 20px;
+      background-image: url('../assets/fundo.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    h1{
+        text-align: center;
+    }
+    h2 {
+      margin-top: 30px;
+    }
+    form {
+      max-width: 800px;
+      margin: auto;
+      background-color:#f4f4f4;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input[type="text"], input[type="number"], textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 4px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    textarea {
+      resize: vertical;
+    }
+    .categoria1 {
+      background-color: #E9967A;
+      padding: 10px;
+      border-radius: 4px;
+      margin-top: 20px;
+    }
+
+    .categoria2 {
+      background-color: #8FBC8F;
+      padding: 10px;
+      border-radius: 4px;
+      margin-top: 20px;
+    }
+
+    .categoria3 {
+      background-color: #B0C4DE;
+      padding: 10px;
+      border-radius: 4px;
+      margin-top: 20px;
+    }
+
+    .categoria4 {
+      background-color: #E0E68C;
+      padding: 10px;
+      border-radius: 4px;
+      margin-top: 20px;
+    }
+
+    .categoria5 {
+      background-color: #ddd;
+      padding: 10px;
+      border-radius: 4px;
+      margin-top: 20px;
+    }
+
+.btn {
+    margin-top: 20px;
+    text-align: center;
+    }
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4682B4;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+}
+
+.anotacoes {
+  font-family: 'La Belle Aurore', cursive;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  min-height: 120px;
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.trocarimagem{
+    text-align:left;
+}
+
+#imagemPersonagemContainer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#imagemPersonagem {
+  max-width: 200px;
+  display: inline-block;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+  .upload-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .imagem-centralizada {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .polaroid {
+      display: inline-block;
+      background: #f4f4f4;
+      padding: 10px 10px 25px 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      border-radius: 4px;
+      text-align: center;
+    }
+
+    .polaroid img {
+      max-width: 300px;
+      height: auto;
+      display: block;
+      border-radius: 2px;
+    }
+
+    .polaroid-caption {
+      font-family: 'Dancing Script', cursive;
+      font-size: 24px;
+      color: #444;
+      margin-top: 10px;
+    }
+
+    #trocarImagemBtn {
+      margin-top: 10px;
+      background-color: #f4f4f4;
+      border: 1px solid #ccc;
+      cursor: pointer;
+    }

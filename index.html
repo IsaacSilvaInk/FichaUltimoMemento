@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ficha Último Memento</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap" rel="stylesheet">
+  <audio id="somTecla" src="../Último Memento/sounds/Typewriter(chosic.com).mp3" preload="auto" loop></audio>
+</head>
+<body>
+  <form id="fichaRpg">
+    <h1>Ficha de Personagem - Último Memento</h1>
+    <div class="upload-container" id="uploadContainer">
+      <input type="file" id="inputImagem" accept="image/*" />
+    </div>
+
+    <div id="imagemPersonagemContainer" class="imagem-centralizada" style="display: none;">
+      <div class="polaroid">
+        <img id="imagemPersonagem" src="" alt="Imagem do personagem" />
+        <div class="polaroid-caption" id="nomeArquivoImagem"></div>
+        <button type="button" id="trocarImagemBtn" onclick="trocarImagem()">Trocar imagem</button>
+      </div>
+    </div>
+ <label>Nome:<input type="text" name="nome" /></label>
+    <label>Idade:<input type="number" name="idade" /></label>
+    <label>Profissão:<input type="text" name="profissao" /></label>
+    <label>Traumas:<textarea name="traumas"></textarea></label>
+    <label>Doenças:<textarea name="doencas"></textarea></label>
+    <label>Amizades:<textarea name="amizades"></textarea></label>
+    <label>Pré-disposições:<textarea name="predisposicoes"></textarea></label>
+    <label>História:<textarea name="historia"></textarea></label>
+    <label>Invetário:<textarea name="inventario"></textarea></label>
+    <label>Anotações(Investigação):<textarea id="anotacoes" name="anotacoes" class="anotacoes" style="font-family: 'La Belle Aurore', cursive;"></textarea><button type="button" onclick="alternarFonte()">Caligrafia</button></label>
+    <label>Anotações(Combate):<textarea name="anotacoescombate"></textarea></label>
+
+    <div class="categoria1">
+      <h2>Habilidades Corporais (30 pontos)</h2>
+      <label>Aparência:<input type="number" name="aparencia" /></label>
+      <label>Destreza:<input type="number" name="destreza" /></label>
+      <label>Força:<input type="number" name="forca" /></label>
+      <label>Resistência:<input type="number" name="resistencia" /></label>
+      <label>Vigor:<input type="number" name="vigor" /></label>
+    </div>
+
+    <div class="categoria2">
+      <h2>Habilidades Sensoriais (30 pontos)</h2>
+      <label>Visão:<input type="number" name="visao" /></label>
+      <label>Audição:<input type="number" name="audicao" /></label>
+      <label>Instinto:<input type="number" name="instinto" /></label>
+      <label>Pressentimento:<input type="number" name="pressentimento" /></label>
+      <label>Desabstração:<input type="number" name="desabstracao" /></label>
+    </div>
+
+    <div class="categoria3">
+      <h2>Habilidades Mentais (30 pontos)</h2>
+      <label>Lógica:<input type="number" name="logica" /></label>
+      <label>Memória:<input type="number" name="memoria" /></label>
+      <label>Mentalidade:<input type="number" name="mentalidade" /></label>
+      <label>Poder:<input type="number" name="poder" /></label>
+      <label>Sabedoria:<input type="number" name="sabedoria" /></label>
+    </div>
+
+    <div class="categoria4">
+      <h2>Habilidades Sociais (30 pontos)</h2>
+      <label>Carisma:<input type="number" name="carisma" /></label>
+      <label>Diplomacia:<input type="number" name="diplomacia" /></label>
+      <label>Intimidação:<input type="number" name="intimidacao" /></label>
+      <label>Lábia:<input type="number" name="labia" /></label>
+      <label>Sorte:<input type="number" name="sorte" /></label>
+    </div>
+
+    <div class="categoria5">
+      <h2>Habilidades Acadêmicas (100 pontos)</h2>
+      <label>Arquearia:<input type="number" name="arquearia" /></label>
+      <label>Arma Branca:<input type="text" name="arma_branca" /></label>
+      <label>Arma de fogo:<input type="text" name="arma_fogo" /></label>
+      <label>Luta corporal:<input type="number" name="luta_corporal" /></label>
+      <label>Explosivos:<input type="number" name="explosivos" /></label>
+      <label>Mecânica e Condução:<input type="number" name="mecanica" /></label>
+      <label>Informática:<input type="number" name="informatica" /></label>
+      <label>Línguas Estrangeiras:<input type="number" name="linguas_estrangeiras" /></label>
+      <label>Português:<input type="number" name="portugues" /></label>
+      <label>Línguas Antigas e História:<input type="number" name="linguas_antigas" /></label>
+      <label>Religião:<input type="number" name="religiao" /></label>
+      <label>Artes:<input type="number" name="artes" /></label>
+      <label>Psicologia:<input type="number" name="psicologia" /></label>
+      <label>Medicina:<input type="number" name="medicina" /></label>
+      <label>Forense:<input type="number" name="forense" /></label>
+      <label>Botânica:<input type="number" name="botanica" /></label>
+      <label>Culinária:<input type="number" name="culinaria" /></label>
+      <label>Sobrevivência:<input type="number" name="sobrevivencia" /></label>
+      <label>Caça:<input type="number" name="caca" /></label>
+      <label>Zootecnia:<input type="number" name="zootecnia" /></label>
+    </div>
+    <div class="btn">
+      <button type="button" onclick="salvarFicha()">Salvar Ficha</button>
+      <button type="button" onclick="carregarFicha()">Carregar Ficha</button>
+    </div>
+  </form>
+</body>
+  <script>
+    const fontes = [
+      "'La Belle Aurore', cursive",
+      "'Shadows Into Light', cursive",
+      "'Dancing Script', cursive",
+      "'Patrick Hand SC', cursive"
+    ];
+    let fonteAtual = 0;
+
+    function alternarFonte() {
+      const textarea = document.getElementById("anotacoes");
+      fonteAtual = (fonteAtual + 1) % fontes.length;
+      textarea.style.fontFamily = fontes[fonteAtual];
+    }
+
+    function salvarFicha() {
+      const dados = {};
+      const form = document.getElementById("fichaRpg");
+      Array.from(form.elements).forEach(el => {
+        if (el.name) dados[el.name] = el.value;
+      });
+      localStorage.setItem("fichaRpg", JSON.stringify(dados));
+      alert("Ficha salva com sucesso!");
+    }
+
+    function carregarFicha() {
+      const dados = JSON.parse(localStorage.getItem("fichaRpg"));
+      if (!dados) return alert("Nenhuma ficha salva encontrada.");
+      const form = document.getElementById("fichaRpg");
+      Array.from(form.elements).forEach(el => {
+        if (el.name && dados[el.name] !== undefined) {
+          el.value = dados[el.name];
+        }
+      });
+      alert("Ficha carregada com sucesso!");
+    }
+
+    document.getElementById("inputImagem").addEventListener("change", function (event) {
+      const arquivo = event.target.files[0];
+      if (!arquivo) return;
+
+      const imagemURL = URL.createObjectURL(arquivo);
+      document.getElementById("imagemPersonagem").src = imagemURL;
+      document.getElementById("nomeArquivoImagem").textContent = arquivo.name;
+      const nomeCompleto = arquivo.name;
+      const nomeSemExtensao = nomeCompleto.replace(/\.[^/.]+$/, "");
+      document.getElementById("nomeArquivoImagem").textContent = nomeSemExtensao;
+
+      document.getElementById("uploadContainer").style.display = "none";
+      document.getElementById("imagemPersonagemContainer").style.display = "block";
+    });
+
+    function trocarImagem() {
+      document.getElementById("inputImagem").value = "";
+      document.getElementById("imagemPersonagem").src = "";
+      document.getElementById("nomeArquivoImagem").textContent = "";
+      document.getElementById("uploadContainer").style.display = "block";
+      document.getElementById("imagemPersonagemContainer").style.display = "none";
+    }
+document.addEventListener('DOMContentLoaded', () => {
+  const audio = document.getElementById('somTecla');
+  let typingTimer;
+
+  document.querySelectorAll('input, textarea').forEach(campo => {
+    campo.addEventListener('keydown', () => {
+      clearTimeout(typingTimer);
+
+      // Inicia o som se não estiver tocando
+      if (audio.paused) {
+        audio.currentTime = 0;
+        audio.play().catch(() => {});
+      }
+
+      // Espera 300ms depois da última tecla para parar o som
+      typingTimer = setTimeout(() => {
+        audio.pause();
+      }, 300);
+    });
+  });
+});
+  </script>
+</body>
+</html>
